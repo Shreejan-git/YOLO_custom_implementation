@@ -23,8 +23,6 @@ def yolov7_botsort_example(img='/home/shreejan/Documents/yolov7/woman.jpg', webc
                 img = cv2.flip(img, 1)  # flip left-right
                 # coordinates, names, object_counts = yolov7_bytetrack_instance.detect(img, conf_thres=0.5)
                 result = yolov7_botsort_instance.detect(img, track=True)
-                print(result)
-
                 for i, *x, conf, cls, label in result:
                     print(i)
                     print(*x)
